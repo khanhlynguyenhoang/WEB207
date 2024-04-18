@@ -1,0 +1,85 @@
+<!-- Banner -->
+<img src="img/banner-khoa-hoc-digital-marketing-V2.jpg" class="img-fluid my-5" alt="Lỗi ảnh">
+<!-- Content -->
+<div>
+    <!-- Chữ đầu trang -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 py-3 my-5 bg-success-subtle">
+            <p class="text-center fs-1   text-success fw-bold">{{ the_p1 }}</p>
+        </div>
+    </div>
+</div>
+<!-- Bảng đặt khóa học -->
+<div class="row">
+    <div class="card my-3">
+        <h5 class="card-header">
+            <div >
+                <a href="#!/giohang" class="text-decoration-none">
+                    <button class="btn bg-info" ng-click="">Xem khóa học đã đặt</button>
+                </a>               
+            </div>
+        </h5>
+        <div class="card-body">
+            <form ng-submit="datHang()">
+                <label for="" class="form-label">Họ tên:</label>
+                <input type="text" class="form-control" ng-model="inputValue.hoTen">
+                <p class="text-danger" ng-if="kiemTra.hoTen">Vui lòng nhập lại họ tên!</p>
+                <label for="" class="form-label">Căn cước công dân:</label>
+                <input type="text" class="form-control" ng-model="inputValue.cccd">
+                <p class="text-danger" ng-if="kiemTra.cccd">Vui lòng nhập lại căn cước công dân!</p>
+                <label for="" class="form-label">Email:</label>
+                <input type="text" class="form-control" ng-model="inputValue.email">
+                <p class="text-danger" ng-if="kiemTra.email">Vui lòng nhập lại email!</p>
+                <!-- Giới tính -->
+                <label for="" class="form-label">Giới tính:</label>
+                <input type="radio" ng-model="inputValue.gioiTinh" class="form-check-input" id="gender"
+                    name="radio-stacked" value="Nam">
+                <label class="form-check-label" for="validationFormCheck2">Nam</label>
+                <input type="radio" ng-model="inputValue.gioiTinh" class="form-check-input" id="gender"
+                    name="radio-stacked" value="Nu">
+                <label class="form-check-label" for="validationFormCheck3">Nữ</label>
+                <p ng-if="kiemTra.gioiTinh" class="text-danger">
+                    Vui lòng nhập lại giới tính!
+                </p>
+                <br>
+                <!-- SDT  -->
+                <label for="" class="form-label">Số điện thoại:</label>
+                <input type="text" class="form-control" id="sdt" ng-model="inputValue.sdt">
+                <p ng-if="kiemTra.sdt" class="text-danger">
+                    Vui lòng nhập lại số điện thoại!
+                </p>
+                <!-- Chọn khóa học -->
+                <label for="" class="form-label">Chọn khóa học: </label>
+                <select class="form-select" ng-model="inputValue.khoaHoc" ng-change="tongTien()" id="khoaHoc">
+                    <option value="">Mời chọn khóa học</option>
+                    <option value="KH1">Khóa học Marketing Online</option>
+                    <option value="KH2">Khóa học bán hàng Online</option>
+                    <option value="KH3">Khóa học Digital Marketing</option>
+                </select>
+                <p ng-if="kiemTra.khoaHoc" class="text-danger">
+                    Vui lòng chọn khóa học cần mua!
+                </p>
+                <div ng-show="inputValue.khoaHoc">
+                    <label for="" class="form-label">Thành tiền:</label>
+                    <input type="number" class="form-control" id="hocPhi" ng-model="inputValue.thanhTien" disabled>
+                </div>
+                <!-- Ngày sinh -->
+                <label for="" class="form-label">Ngày sinh:</label>
+                <input type="date" class="form-control" ng-model="inputValue.ngaySinh">
+                <p class="text-danger" ng-if="kiemTra.ngaySinh">Vui lòng nhập lại ngày sinh!</p>
+                <!-- HTTT -->
+                <label for="thanhToan" class="form-label">Chọn hình thức thanh toán: </label>
+                <select class="form-select" aria-label="select example" id="thanhToan" ng-model="inputValue.hinhThucTT">
+                    <option value="">Mời chọn phương thức thanh toán</option>
+                    <option value="1" >Thanh toán tiền mặt</option>
+                    <option value="2">Thanh toán qua ngân hàng</option>
+                </select>
+                <p ng-if="kiemTra.hinhThucTT" class="text-danger">
+                    Vui lòng chọn hình thức thanh toán!
+                </p>
+                <button class="btn btn-primary  mt-3" type="reset">Reset</button>
+                <button type="submit" class="btn bg-success mt-3 text-light">Đặt hàng</button>
+            </form>
+        </div>
+    </div>
+</div>

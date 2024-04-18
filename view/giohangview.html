@@ -1,0 +1,56 @@
+<!-- Banner -->
+<img src="img/banner-khoa-hoc-digital-marketing-V2.jpg" class="img-fluid my-5" alt="Lỗi ảnh">
+<!-- Content -->
+<div>
+    <!-- Chữ đầu trang -->
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 py-3 my-5 bg-success-subtle">
+            <p class="text-center fs-1   text-success fw-bold">{{title }}</p>
+        </div>
+    </div>
+</div>
+<div class="card mt-5">
+    <h5 class="card-header">
+        <div >
+            <a href="#!/dathang" class="text-decoration-none">
+                <button class="btn bg-success text-light"  >Đặt thêm</button>
+            </a>               
+        </div>
+    </h5>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Họ tên</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Khóa học</th>
+                    <th scope="col">Tổng tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in listKhoaHoc">
+                    <th scope="row">{{$index +1}}</th>
+                    <td>{{item.hoTen}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.sdt}}</td>
+                    <td>{{item.khoaHoc == "KH1" ? "Khóa học Marketing Online" : item.khoaHoc == "KH2" ? "Khóa học bán hàng Online" : "Khóa học Digital Marketing"  }}</td>
+                    <td>{{item.thanhTien | currency:'':0}} VND</td>
+                    <td>
+                        <div >
+                            <a href="#!/chitietgiohang/{{item.id}}" class="text-decoration-none">
+                                <button class="btn bg-info" ng-click="">Xem chi tiết</button>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <button class="btn bg-danger" ng-click="deleteKhoaHoc(item.id)">Xóa</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

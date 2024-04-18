@@ -1,0 +1,28 @@
+
+        <!-- Chữ đầu trang -->
+        <div class="row">
+            <div >
+                <div class="col-12 col-sm-12 col-md-12">
+                    <p class="text-center fs-1 pt-5 mt-5 mb-0 text-success fw-bold">{{ the_p1 }}</p>
+                </div>
+            </div>
+        </div>
+        <!-- Bản đồ -->
+        <div>
+            <div class="row my-5">
+                <div class="col-12 col-md-6 col-sm-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62711.731677699!2d106.674772!3d10.774253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1181cbf3c3%3A0xabfe2bfae056fc7!2zTU9BIFZp4buHdCBOYW0gLSBUxrAgduG6pW4gdsOgIMSQw6BvIHThuqFvIERpZ2l0YWwgbWFya2V0aW5n!5e0!3m2!1svi!2sus!4v1679336078896!5m2!1svi!2sus"
+                            height="" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-sm-12" >
+                    <p ng-repeat="item in content1Arr">
+                        <i class="{{ item.icon }}"></i>
+                        {{ item.the_p2 }}
+                    </p>
+                </div>
+            </div>
+        </div>

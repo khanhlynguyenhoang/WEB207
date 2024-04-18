@@ -1,0 +1,52 @@
+{
+  "khoaHoc": [
+    {
+      "hoTen": "Mr. Sarah Marquardt",
+      "cccd": 65313,
+      "email": "Tod_Gutmann@example.com",
+      "gioiTinh": "Nam",
+      "sdt": "0987456321",
+      "khoaHoc": "KH1",
+      "thanhTien": 2000000,
+      "ngaySinh": "2001-12-11T19:57:04.281Z",
+      "hinhThucTT": "1",
+      "id": "1"
+    },
+    {
+      "hoTen": "Joanne Williamson",
+      "cccd": 98380,
+      "email": "Issac11@example.org",
+      "gioiTinh": "Nam",
+      "sdt": "0963258741",
+      "khoaHoc": "KH2",
+      "thanhTien": 3000000,
+      "ngaySinh": "2001-03-20T12:25:55.049Z",
+      "hinhThucTT": "1",
+      "id": "2"
+    },
+    {
+      "hoTen": "Randolph Hilpert",
+      "cccd": 35388,
+      "email": "Izabella.Reinger@example.net",
+      "gioiTinh": "Nu",
+      "sdt": "0368521477",
+      "khoaHoc": "KH3",
+      "thanhTien": 4000000,
+      "ngaySinh": "1986-05-23T16:59:01.749Z",
+      "hinhThucTT": "2",
+      "id": "3"
+    },
+    {
+      "hoTen": "nguyen ly",
+      "cccd": "123456879",
+      "email": "lyly@gmail.com",
+      "gioiTinh": "Nam",
+      "sdt": "0321456987",
+      "khoaHoc": "KH1",
+      "thanhTien": 2000000,
+      "ngaySinh": "2024-01-18T17:00:00.000Z",
+      "hinhThucTT": "2",
+      "id": "dd41"
+    }
+  ]
+}

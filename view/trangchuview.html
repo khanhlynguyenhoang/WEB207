@@ -1,0 +1,72 @@
+<!-- header -->
+<img src="img/banner-moavietnam-2023.jpg" class="img-fluid" alt="Lỗi ảnh">
+<!-- content -->
+<!-- Chữ đầu trang -->
+<div>
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+      <p class="text-center fs-2 mt-5 mb-0 text-success fw-bold">{{ thep1 }}</p>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12">
+      <p class="text-center fs-5 mb-5 text-success fw-bold"> {{ thep2 }}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- block content -->
+<div>
+  <div class="row ">
+    <div class="col-12 col-md-4 col-sm-12" ng-repeat="item in content1Arr">
+      <div class="card m-auto hover-effect" style="width: 20rem; height: 15rem;">
+        <div class="card-body ">
+          <h5 class="card-title py-3 px-3 text-light text-center bg-success ">{{ item.the_h5 }}</h5>
+          <p class="card-text text-center ">{{ item.the_p }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- slider -->
+<div>
+  <div class="row mt-5">
+    <div class="col-12 col-md-12 col-sm-12">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" ng-repeat="item2 in sliderArr">
+            <img src="{{item2}}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Khóa học được quan tâm nhiều nhất -->
+<div >
+  <div class="row ">
+    <div class="col-12 col-sm-12 col-md-12">
+      <p class="text-center fs-1 my-5  text-success fw-bold">{{ thep3 }}</p>
+    </div>
+    <div class="col-12 col-md-3 col-sm-6 my-auto " ng-repeat="item3 in content2Arr" >
+    <a href="#!/dathang" class="text-decoration-none">
+      <div class="card hover-effect2" style="width: 18rem;">
+        <img src="{{item3.img}}" class="card-img-top object-fit-cover " alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center fs-3 fw-bold text-success">{{ item3.the_h52 }}</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+  </div>
